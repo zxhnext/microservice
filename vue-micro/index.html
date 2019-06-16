@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>总部项目</title>
+</head>
+
+<body>
+    <div id="app">
+        主站
+        <span id=""></span>
+        <hr />
+        <index></index>
+    </div>
+    <script src="https://cdn.staticfile.org/systemjs/3.0.0/system.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.6.8/vue.js"></script>
+    <script>
+        //webpack 组件 manifest.json + workbox
+        System.import("./scripts/index-compiled.js").then((_) => {
+            const s = new _.default;
+            s.init();
+        })
+        new Vue({
+            el: "#app",
+            components: {
+                "index": () => System.import("./scripts/index.js")
+            }
+        })
+    </script>
+</body>
+
+</html>

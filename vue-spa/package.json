@@ -1,0 +1,27 @@
+{
+  "name": "yd-microfespa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
+    "dev:babel": "babel ./src/index.js -o ./index-compiled.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-modules-systemjs": "^7.3.4",
+    "css-loader": "^2.1.0",
+    "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.8",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-manifest-plugin": "^2.0.4",
+    "webpack-system-register": "^1.6.0"
+  }
+}
